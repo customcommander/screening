@@ -27,3 +27,28 @@
     console.assert(is_object(null) === false             , 'assert #3');
     console.assert(is_object(new function () {}) === true, 'assert #4');
     ```
+
+0.  This is the content of a file named **foo.js**:
+
+    ```javascript
+    function foo() {
+        (function () {
+            alert('hello world');
+        })();
+    }
+    ```
+
+    And this is **foo.html**:
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="foo.js"></script>
+        </head>
+        <body></body>
+    </html>
+    ```
+
+    What happens when **foo.html** is loaded in a web browser?
+
