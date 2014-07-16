@@ -13,3 +13,17 @@
     ```
 
     NB: You don't need to do parameters validation.
+
+0.  One of these assertions will fail. Which one and why?
+
+    ```javascript
+    // Returns true if thing is an object
+    function is_object(thing) {
+        return thing && Object.prototype.toString.call(thing) === '[object Object]';
+    }
+
+    console.assert(is_object([]) === false               , 'assert #1');
+    console.assert(is_object({}) === true                , 'assert #2');
+    console.assert(is_object(null) === false             , 'assert #3');
+    console.assert(is_object(new function () {}) === true, 'assert #4');
+    ```
