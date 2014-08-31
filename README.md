@@ -52,3 +52,32 @@
 
     What happens when **foo.html** is loaded in a web browser?
 
+0.  What is the output of the following program?
+
+    ```javascript
+    function foo() {
+      return new bar();
+    }
+
+    function bar() {
+      return {};
+    }
+
+    function baz() {
+    }
+
+    var a = new foo();
+    var b = new bar();
+    var c = new baz();
+
+    try {
+      console.log('#1: ', a instanceof foo ? 'yes' : 'no');
+      console.log('#2: ', a instanceof bar ? 'yes' : 'no');
+      console.log('#3: ', b instanceof bar ? 'yes' : 'no');
+      console.log('#4: ', c instanceof baz ? 'yes' : 'no');
+    } catch (e) {
+      console.log('err!');
+    }
+    ```
+
+
