@@ -80,4 +80,24 @@
     }
     ```
 
+0.  Which of the following assertions will fail?
+
+    ```javascript
+    function assert_equal(a, b, message) {
+        if (a !== b) {
+            console.log(message);
+        }
+    }
+
+    assert_equal(true    , true     , 'test #1');
+    assert_equal(true    , 1        , 'test #2');
+    assert_equal([1,2]   , [1,2]    , 'test #3');
+    assert_equal({}      , {}       , 'test #4');
+    assert_equal(10      , '10'     , 'test #5');
+    assert_equal('foo'   , 'foo'    , 'test #6');
+    assert_equal(Infinity, Infinity , 'test #7');
+    assert_equal(null    , undefined, 'test #8');
+    assert_equal(NaN     , NaN      , 'test #9');
+    assert_equal(1.0     , 1        , 'test #10');
+    ```
 
